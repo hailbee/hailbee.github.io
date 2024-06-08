@@ -1,3 +1,112 @@
-body {
-    background-image: linear-gradient(to bottom right, red, yellow);
-  }
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --purple: #CFB9D6; 
+  --gray-purple: #756774;
+
+  --bg-lilac: #F9E7FF;
+  --bg-yellow: #FCFFD6;
+  --bg-turqoise: #83C1CE;
+}
+
+html {
+  background-size: cover;
+  background-image: linear-gradient(to bottom, var(--bg-lilac), var(--bg-yellow));
+  min-height: 100%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: var(--purple);
+  overflow: hidden;
+  min-width: 100%;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Style the Webpage name inside the navigation bar */
+.topnav p {
+  color: var(--gray-purple);
+  float: left;
+  text-align: center;
+  display: inline;
+
+  padding: 1%;
+  padding-left: 4%;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: var(--black);
+  float: right;
+  text-align: center;
+  display: inline;
+
+  padding: 2% 2.5% 1%;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-decoration: overline;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: var(--white);
+}
+
+button {
+  background-color: var(--black);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  float: right;
+  text-align: center;
+  font-size: 12px;
+  padding: .8% 2%;
+  margin: 1%;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.aboutMe {
+  padding: 5% 12%;
+  display: flex;
+  align-items: center; 
+  text-align: justify;
+  justify-content: center;
+
+}
+
+.text {
+  max-width: 50%;
+  font-weight: 700;
+  float:left;
+}
+
+h1 {
+  font-family: "JetBrains Mono", monospace;
+
+}
+
+.main {
+  font-family: "Kameron", serif;
+  font-weight: normal;
+  line-height: 20px;   /* within paragraph */
+  margin-bottom: 30px; /* between paragraphs */
+}
+
+img {
+  max-width: 60%;
+  height: auto;
+  float:right;
+  align-items: center;
+
+  border: 3px solid var(--black);
+  box-shadow: 1px 1px 1px 1px var(--black);
+}
