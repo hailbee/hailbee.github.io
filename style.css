@@ -10,20 +10,31 @@
   --bg-lilac: #F9E7FF;
   --bg-yellow: #FCFFD6;
   --bg-turqoise: #83C1CE;
+
+  --grey: #0000006c;
 }
 
 html {
-  background-size: cover;
+  height: 100%;
+}
+
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-size:cover;
   background-image: linear-gradient(to bottom, var(--bg-lilac), var(--bg-yellow));
-  min-height: 100%;
+  background-attachment: fixed;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: var(--purple);
-  overflow: hidden;
-  min-width: 100%;
+  overflow: auto;
   font-family: "JetBrains Mono", monospace;
+  padding: 0.8%;
 }
 
 /* Style the Webpage name inside the navigation bar */
@@ -54,12 +65,9 @@ html {
 /* Change the color of links on hover */
 .topnav a:hover {
   text-decoration: overline;
+  text-decoration-thickness: 2px;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  color: var(--white);
-}
 
 button {
   background-color: var(--black);
@@ -72,7 +80,19 @@ button {
   padding: .8% 2%;
   margin: 1%;
   font-family: "JetBrains Mono", monospace;
+  outline-style:solid;
+  outline-color: var(--black);
+  outline-width: 2px;
 }
+
+button:hover {
+  background-color: var(--bg-lilac);
+  color: var(--black);
+  outline-style:solid;
+  outline-color: var(--black);
+  outline-width: 2px;
+}
+
 
 .aboutMe {
   padding: 5% 12%;
@@ -109,4 +129,51 @@ img {
 
   border: 3px solid var(--black);
   box-shadow: 1px 1px 1px 1px var(--black);
+}
+
+.popup {
+  position:absolute;
+  display:inline-block;
+  bottom: 12%;
+  left: 2%;
+  padding: 15% 15% 0% 0%;
+  width: max-content;
+  color: var(--white);
+
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--grey);
+  border-radius: 6px;
+  padding: 0% 20% 0% 20%;
+  align-items: center;
+  width: max-content;
+  font-family: "JetBrains Mono", monospace;
+  font-size: small;
+}
+
+.popup a {
+  color: var(--white);
+  text-align: center;
+}
+
+.popup a:hover {
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

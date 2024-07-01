@@ -11,10 +11,10 @@
 <body>
 
     <div class="topnav">
-        <button type="button" class="contactMe">Contact Me</button> 
-        <a href="#about">About Me</a>
-        <a href="#contact">Public Projects</a>
-        <a href="#news">Past Experiences</a>
+        <button type="button" onclick="ShowPopup()">Contact Me</button> 
+        <a href="publicProjects.html">Public Projects</a>
+        <a href="pastExperience.html">Past Experience</a>
+        <a href="main.html">About Me</a>
         <p> Hailey Boriel's Personal Website</p>
     </div> 
 
@@ -32,6 +32,21 @@
         </div>
     </div> 
 
+    <div class="popup">
+        <span class="popuptext" id="contactMe"> 
+            <p> Reach out on <a href="https://www.linkedin.com/in/hboriel"> LinkedIn </a> or find me through the <a href="https://web.mit.edu/directory/"> MIT Directory </a> </p>
+        </span>
+    </div>
+
 </body>
 
 </html>
+
+<script type="text/javascript">
+    // When the user clicks on <div>, open the popup
+    function ShowPopup() {
+      var popup = document.getElementById("contactMe");
+      popup.classList.toggle("show");
+      
+    }
+</script>
